@@ -4,7 +4,7 @@ import numpy as np
 
 def parse(filename="fr_gsd-ud-train.conllu"):
 
-    f = open('../data/{}'.format(filename), 'r', encoding="utf-8")
+    f = open('./data/{}'.format(filename), 'r', encoding="utf-8")
 
     sentences = []
     types_to_pos = []
