@@ -50,3 +50,44 @@ $V_{it} = \max_{t'} T_{t't} V_{(i-1) t'} E_{t s_i}$
 $T_{it} = argmax_{t'} E_{t s_i} T_{t' t} V_{(i-1) t'}$
 
 Use sum instead of max -> $\sum_t P(s|t)P(t) = P(s)$
+
+## 4
+
+Language model
+
+Assign probability to a given sentence
+
+$\mathcal{V}$ vocabulary
+
+$\mathcal{P}(\mathcal{V}^+)$
+
+$f:\mathcal{V}^+ \rightarrow [0, 1]$
+
+$S \in f:\mathcal{V}^+$
+
+$\mathcal{L} \subset \mathcal{P}(S)=0 \text{ iff } S \notin \mathcal{L}$
+
+$\mathcal{C}$ corpus: set of sentences
+
+$w \in \mathcal{V}, \qquad \pi(w)=\frac{freq(w)}{length(\mathcal{C})}$
+
+$\lvert S \rvert = n$
+
+$f_1(S)= \prod_{i=1}^n \pi(w_i)$
+
+$f_2(S)= \pi(w_1) \prod_{i=1}^n \pi(w_{i+1} \mid w_i)$
+
+$f_k(S)= \pi(w_1 \dots w_{k-1}) \prod_{i=k}^n \pi(w_{i} \mid w_{i-(k+1)} \dots w_{i-1})$
+
+Space for $f_1$: O(n)
+
+Space for $f_2$: n2 + n
+
+Space for $f_k$: n^k
+
+Pseudo-counts
+
+For pos tagging: f2 np
+
+pick paper from acl anthology in 2 weeks (less than 5 years)
+(must read paper in nlp)
